@@ -1,0 +1,135 @@
+*{
+  font-family:  Lato, sans-serif;
+}
+
+.container{
+  width: 60%;
+}
+.header{
+  background-color: #0e1d3c;
+  margin: -20px 0 0 0;
+}
+.item_header{
+  font-size: 3.5em;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 100px 0 100px 0;
+  display: inline-block;
+}
+.back{
+  display: inline-block;
+  outline: none;
+  font-size: 2.7em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: #313464;
+  color: #ffffff;
+  padding: 8px 5px 13px 20px;
+  margin: 25px 30px 50px 40px;
+}
+
+.item-input input[type="text"] {
+  display: inline-block;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  font-size: 3em;
+  width: 75%;
+  padding: 3px 0px 3px 3px;
+  margin: 50px 20px 15px 35px;
+  border-bottom: 1px solid #efefef;
+}
+
+.item-input input[type="text"]:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #575757;
+}
+
+input,
+input:active,
+input:focus {
+    outline: none;
+    border-style: none;
+}
+
+input::placeholder {
+  font-family: sans-serif;
+}
+
+.btn_submit{
+  border: 0px;
+  border-style: none;
+  display: inline-block;
+  font-size: 3.5em;
+  padding: 3px 25px 3px 25px;
+  border-radius: 50%;
+  background-color: #313464;
+  color: white;
+  border: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.item_wrapper{
+  width: 95%;
+  font-size: 1.5em;
+  margin: 20px auto;
+}
+
+.task_text{
+  display: inline-block;
+  width: 93%;
+  border-bottom: 1px solid #efefef;
+  overflow: auto;
+}
+
+.remove_task{
+  display: inline-block;
+  margin:5px 10px 10px 10px;
+  padding: 0 8px 2px 8px;
+  vertical-align: top;
+  font-size: 0.8em;
+  outline: none;
+  border-radius: 50%;
+  border-style: none;
+  color: white;
+  background-color: #960018;
+}
+
+.comment_text{
+  display: block;
+  width: 96%;
+  margin-left: 27px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #efefef;
+  overflow: auto;
+}
+
+.comment_form{
+  margin: 20px 350px 15px 67px;
+}
+
+.comment_input{
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  border-bottom: 1px solid #efefef;
+}
+
+.comment_input:focus{
+  border-bottom: 1px solid #575757;
+}
+
+.btn_submit_comment{
+  border: 0px;
+  border-style: none;
+  padding: 3px 12px 3px 12px;
+  border-radius: 50%;
+  background-color: #313464;
+  color: white;
+  border: none;
+}

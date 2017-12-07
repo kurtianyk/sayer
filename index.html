@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="taskApp">
+	<head>
+		<meta charset="utf-8">
+    	<title>Sayer</title>
+    	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="app/css/style.css" >
+			<script src="node_modules/angular/angular.js"></script>
+	</head>
+	<body ng-controller="TaskController" class="index-body">
+	<div class="container">
+    <div class="header">
+			<div class="back">&larr;</div>
+      <h1 class="item_header">Create new item</h1>
+    </div>
+
+		<form name ="taskForm" ng-submit="addTask()" class="item-input">
+      <input type="text" name="taskInput" ng-model="taskInput" value={{taskInput}} placeholder="New item title.." required>
+      <input type="submit" value=">" class="btn_submit">
+    </form>
+
+    <ul>
+    	<li ng-repeat="task in tasks track by $index" class ="item_wrapper">
+      	<button class="remove_task" ng-click="removeTask($index)">x</button>
+        	<span ng-bind="task.taskText" class="task_text"></span>
+					<ul>
+						<li ng-repeat="comment in task.taskComments track by $index">
+							<span ng-bind="comment" class="comment_text"></span>
+						</li>
+					</ul>
+					<form id ="form" name ="commentForm" class="comment_form" ng-submit="addComment($index)">
+			      <input type="text" name="commentInput" class="comment_input" ng-model="tasks.task[$index]"  placeholder="New comment.." required>
+			      <input type="submit" value=">" class="btn_submit_comment">
+			    </form>
+      </li>
+    </ul>
+	</div>
+	<script src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="app/js/app.js" ></script>
+  <script src="app/js/controllers/TaskController.js" ></script>
+	</body>
+</html>
